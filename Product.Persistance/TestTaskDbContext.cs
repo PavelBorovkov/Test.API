@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using TestTask.Domain;
+using TestTask.Application.Interfaces;
 
 namespace TestTask.Persistance
 //отвечает за взаимодействие с базой
 {
-    public partial class TestTaskDbContext : DbContext
+    public partial class TestTaskDbContext : DbContext, ITestTaskDbContext 
     {
         public TestTaskDbContext()
         {
