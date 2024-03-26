@@ -8,9 +8,9 @@ using System.Reflection;
 
 namespace TestTask.Application.Common.Mappings
 {
-    public class AsswmblyMappingProfile : Profile
+    public class AssemblyMappingProfile : Profile
     {
-        public AsswmblyMappingProfile(Assembly assembly) =>
+        public AssemblyMappingProfile(Assembly assembly) =>
             ApplyMappingsFromAssembly(assembly);
         
         private void ApplyMappingsFromAssembly(Assembly assembly)

@@ -12,7 +12,7 @@ namespace TestTask.Application.Products.Queries.GetProductInfo
     public class ProductInfoVm:IMapWith<Product>
     {
         public string Name { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; } = null!;
 
         public void Mapping(Profile profile)
         {
