@@ -11,7 +11,7 @@ namespace TestTask.Application.Products.Command.CreateProduct
     {
         //Данный класс содержит в себе то , что необходимо для создания обьекта
         public string Name { get; set; }
-        public string Description { get; set; } = null!;
+        public string? Description { get; set; } = null!;
 
     }
 }

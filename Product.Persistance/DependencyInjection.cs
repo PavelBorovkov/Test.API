@@ -10,7 +10,7 @@ namespace TestTask.Persistance
         public static IServiceCollection AddPersistence(this IServiceCollection services,
             IConfiguration configuration)
         {
-            var connectionString = configuration["DbConnection"];
+            var connectionString = configuration["ConnectionString"];
             services.AddDbContext<TestTaskDbContext>(options =>
             {
                 options.UseSqlServer(connectionString);
