@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 using System.Reflection;
+using FluentValidation;
+using TestTask.Application.Common.Behaivors;
 
 namespace TestTask.Application
 {
@@ -16,6 +18,9 @@ namespace TestTask.Application
         {
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies
             (Assembly.GetExecutingAssembly()));
+            services.AddValidatorsFromAssemblies(new[] {Assembly.GetExecutingAssembly()});
+            services.AddTransient(typeof(IPipelineBehavior<,>),
+                typeof(ValidationBehaivor<,>));
             return services;
         }
 
